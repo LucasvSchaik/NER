@@ -1,0 +1,22 @@
+from copy import copy
+def create_training_data(feature_function, training_sentences):
+    """
+    Creates training data from the corpus of training_sentences and the feature_function
+    :param feature_function: function that maps (untagged sentence, word index,
+     history) to a dict of features (from features.py)
+    :param training_sentences: training sentences as lists of nltk.Tree objects
+    :return: list of (dict, IOB tag) pairs
+    """
+    # TODO reformat sentences to ((word, pos_tag), iob_tag) pairs
+    reform = reformat_corpus_for_tagger(training_sentences)
+    
+    # TODO turn the sentences into appropriate training data by finding their features
+    train_set = []
+    for n in range(len(training_sentences)):
+        iobs = [iob for ((word, pos), iob) in reform[n]]
+        history = tuple(iobs)
+        for i in range(len(iobs)):
+            feature = feature_function([(word, pos) for ((word, pos), iob) in reform[n]], i, history[:i])
+            train_set.append((feature, iobs[i]))
+
+    return train_set
