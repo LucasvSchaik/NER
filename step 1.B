@@ -14,7 +14,7 @@
         self.train_set = []  # initialise self.train_set
 
         # TODO: store the feature_function parameter as self.feature_function
-        self.feature_function = feature_function(sentence, index, history)
+        self.feature_function = feature_function
         
         # TODO: call self.create_training_data on training_sentences
         self.create_training_data(training_sentences)
