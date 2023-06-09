@@ -20,12 +20,10 @@
         self.create_training_data(training_sentences)
         
         # TODO: check that algorithm is one of "NaiveBayes", "DecisionTree", "IIS", and "GIS"
-        try:
-            algorithm == "NaiveBayes" or algorithm == "DecisionTree" or algorithm == "IIS" or algorithm == "GIS"
-        # and raise an error if it's not
-        except ImportError:
+        if algorithm not in ["NaiveBayes", "DecisionTree", "IIS", "GIS"]:
             print("algorithm is not one of NaiveBayes, DecisionTree, IIS, or GIS")
-            raise
+            raise ValueError("Invalid algorithm")
+
             
             
        ######################################################################
