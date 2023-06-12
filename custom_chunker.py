@@ -140,10 +140,16 @@ class _ConsecutiveNPChunkTagger(nltk.TaggerI):
         # TODO: call self.create_training_data on training_sentences
         self.create_training_data(training_sentences)
 
-        # TODO: check that algorithm is one of "NaiveBayes", "DecisionTree", "IIS", and "GIS"
-        if algorithm not in ["NaiveBayes", "DecisionTree", "IIS", "GIS"]:
-            print("algorithm is not one of NaiveBayes, DecisionTree, IIS, or GIS")
-            raise ValueError("Invalid algorithm")
+        if algorithm == "NaiveBayes":
+            self.classifier = nltk.NaiveBayesClassifier.train(self.train_set)
+            self.algorithm = "Naive Bayes"
+        elif algorithm == "DecisionTree":
+            self.classifier = nltk.DecisionTreeClassifier.train(self.train_set)
+            self.algorithm = "Decision Tree"
+        else:
+            self.classifier = nltk.MaxentClassifier.train(
+                self.train_set, algorithm=algorithm, trace=verbose)
+            self.algorithm = f"Maximum Entropy with {algorithm}"
 
 
     @staticmethod

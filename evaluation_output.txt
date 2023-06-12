@@ -1,2 +1,111 @@
 output from evaluation of classifiers. 
 
+features1 pickled as features1.pickle. 
+
+features1
+str(object='') -> str
+str(bytes_or_buffer[, encoding[, errors]]) -> str
+
+Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+
+ChunkParse score:
+    IOB Accuracy:  94.0%%
+    Precision:     45.9%%
+    Recall:        55.4%%
+    F-Measure:     50.2%%features2 pickled as features2.pickle. 
+
+features2
+str(object='') -> str
+str(bytes_or_buffer[, encoding[, errors]]) -> str
+
+Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+
+ChunkParse score:
+    IOB Accuracy:  92.5%%
+    Precision:     44.7%%
+    Recall:        27.6%%
+    F-Measure:     34.2%%features3 pickled as best.pickle.
+
+features3
+str(object='') -> str
+str(bytes_or_buffer[, encoding[, errors]]) -> str
+
+Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+
+ChunkParse score:
+    IOB Accuracy:  94.5%%
+    Precision:     47.7%%
+    Recall:        54.1%%
+    F-Measure:     50.7%%features3 pickled as features3.pickle. 
+
+features3
+str(object='') -> str
+str(bytes_or_buffer[, encoding[, errors]]) -> str
+
+Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+
+ChunkParse score:
+    IOB Accuracy:  94.5%%
+    Precision:     47.7%%
+    Recall:        54.1%%
+    F-Measure:     50.7%%features4 pickled as other.pickle.
+
+features4
+str(object='') -> str
+str(bytes_or_buffer[, encoding[, errors]]) -> str
+
+Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+
+ChunkParse score:
+    IOB Accuracy:  93.4%%
+    Precision:     42.5%%
+    Recall:        61.8%%
+    F-Measure:     50.4%%test_features pickled as test_features.pickle. 
+
+test_features
+str(object='') -> str
+str(bytes_or_buffer[, encoding[, errors]]) -> str
+
+Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.
+
+ChunkParse score:
+    IOB Accuracy:  90.1%%
+    Precision:      0.0%%
+    Recall:         0.0%%
+    F-Measure:      0.0%%
